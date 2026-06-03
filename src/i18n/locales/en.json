@@ -1,0 +1,186 @@
+{
+  "nav": {
+    "about": "About",
+    "impact": "Impact",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "home": "Home",
+    "resume": "Resume",
+    "resumeEnglish": "English",
+    "resumeJapanese": "Japanese"
+  },
+  "home": {
+    "scrollDown": "SCROLL DOWN",
+    "words": ["Developer", "Builder", "Engineer", "WebDev", "Commit", "AI Creator", "Crafting", "Focused"],
+    "tagline": "Building scalable interfaces and smart AI automation",
+    "cta": "Let's connect",
+    "exploreCta": "Explore Portfolio",
+    "role": "Full Stack Developer",
+    "subtitle": "Building clean, scalable code and modern AI integrations",
+    "location": "Based in India・React・Next.js・Gen AI"
+  },
+  "impact": {
+    "quote": "This portfolio displays my problem-solving mindset, technical decisions, and the way I turn complex concepts into functional, reliable interfaces."
+  },
+  "about": {
+    "title": "About me",
+    "paragraph1": "I'm Abhiram Bhuvanagiri, a Full Stack Developer with a strong passion for building scalable web applications, optimizing performance, and integrating intelligent AI architectures to elevate digital experiences.",
+    "paragraph2": "With a strong foundation in modern frontend frameworks and backend orchestration, I focus on writing clean, maintainable code and constructing robust automation flows that solve real-world problems."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "bgText": "SKILLS",
+    "taglineStatic": "I constantly try to",
+    "taglineWords": ["Improve", "Learn", "Adapt", "Grow"],
+    "categories": {
+      "languages": "Programming Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases & Storage",
+      "tools": "Tools & Technologies"
+    }
+  },
+  "experience": {
+    "title": "Experience & Education",
+    "subtitle": "My career timeline and academic background",
+    "internshipTitle": "Work Experience",
+    "educationTitle": "Education",
+    "certificationsTitle": "Certifications & Learning",
+    "remote": "Remote",
+    "jobs": [
+      {
+        "role": "Gen AI Engineer Intern",
+        "company": "SyncAI",
+        "location": "Remote",
+        "period": "Nov 2025 - Apr 2026",
+        "bullets": [
+          "Built and deployed LLM-powered applications using LangChain and Hugging Face Transformers.",
+          "Implemented RAG pipelines with vector databases to improve contextual response accuracy.",
+          "Designed prompt engineering workflows for optimized AI-generated outputs.",
+          "Integrated AI functionalities into full-stack applications using FastAPI and React.",
+          "Improved inference efficiency and reduced latency through optimized API handling."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering",
+        "school": "VITS Engineering College",
+        "period": "Nov 2022 - May 2026",
+        "grade": "Cumulative GPA: 7.0 / 10.0",
+        "coursework": "Relevant Coursework: Python, JavaScript, Tailwind CSS, Data Structures and Algorithms"
+      }
+    ],
+    "certifications": [
+      "Full Stack Web Development — The Odin Project, freeCodeCamp",
+      "Generative AI with Large Language Models — DeepLearning.AI & AWS"
+    ]
+  },
+  "statement": {
+    "dividerText": "Each project represents a",
+    "dividerText2": "problem solved.",
+    "selected": "FEATURED",
+    "projects": "PROJECTS",
+    "showcase": "SHOWCASE"
+  },
+  "contact": {
+    "title": "Let's start a conversation",
+    "subtitle": "I am open to new opportunities and collaboration.",
+    "formTitle": "Send a Message",
+    "nameLabel": "Name",
+    "namePlaceholder": "What is your name?",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Where can I reach you?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "What would you like to discuss?",
+    "errors": {
+      "nameRequired": "Please enter your name",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Please enter your message"
+    },
+    "warnings": {
+      "emailDomainTypo": "Did you mean {domain}?"
+    },
+    "requiredFieldMessage": "Please fill out this field.",
+    "send": "Send Message",
+    "sendLoading": "Sending...",
+    "successTitle": "Thanks for getting in touch.",
+    "successMessage": "I have received your message and will get back to you shortly."
+  },
+  "footer": {
+    "github": "GITHUB",
+    "linkedin": "LINKEDIN",
+    "inquiry": "INQUIRY",
+    "location": "INDIA: (GMT+5:30)",
+    "tagline": "DESIGNING WITH CODE",
+    "rights": "All Rights Reserved.",
+    "name": "ABHIRAM"
+  },
+  "projects": {
+    "stockApp": "Real-Time Stock Market App",
+    "stockAppSubtitle": "Next.js stock application using Inngest for background polling and MongoDB, with AI insights and Better Auth.",
+    "voiceApp": "AI Voice Interview Platform",
+    "voiceAppSubtitle": "Mock interview simulation utilizing Vapi for real-time interactive voice dialog and Firebase authentication.",
+    "botApp": "Automated Job Application Bot",
+    "botAppSubtitle": "Workflow bot built with n8n and LinkedIn APIs using AI-based relevance scoring and Slack alerts."
+  },
+  "projectDetail": {
+    "back": "Back to Projects",
+    "statusLabel": "Status",
+    "githubLabel": "GitHub Repository",
+    "techStackLabel": "Tech Stack",
+    "stock-market-app": {
+      "title": "AI-Powered Real-Time Stock Market App",
+      "status": "Completed & Deployed",
+      "sections": {
+        "overview": {
+          "title": "Project Overview",
+          "p1": "This real-time stock market web application provides users with live financial tracking and automated background updates. Designed to render complex stock trends and portfolio performance dynamically, it simplifies tracking assets with rich visuals.",
+          "p2": "By leveraging a serverless scheduling framework (Inngest) and Next.js, the application fetches and processes financial records asynchronously in the background. This ensures that user dashboards display up-to-the-minute data without requiring constant manual page reloads.",
+          "p3": "To assist users in making informed decisions, the application incorporates intelligent, AI-driven insights. It highlights emerging patterns, historical anomalies, and trading suggestions based on real-time market data."
+        },
+        "coreIdea": {
+          "title": "Core Architecture",
+          "p1": "The frontend is built with Next.js, featuring optimized server-side rendering and responsive dashboards. In the backend, MongoDB handles persistent storage of user portfolios and historical tickers.",
+          "p2": "Automated pipelines are managed by Inngest, which schedules background cron jobs to pull stock data periodically. Security is enforced through Better Auth, and custom email notifications are dispatched via Node Mailer."
+        }
+      }
+    },
+    "voice-interview-simulation": {
+      "title": "AI-Driven Voice Interview Simulation Platform",
+      "status": "Completed & Deployed",
+      "sections": {
+        "overview": {
+          "title": "Project Overview",
+          "p1": "This platform simulates realistic technical and behavioral interviews using a responsive voice AI model. It addresses the anxiety and preparation challenges candidates face by providing a private, interactive mock-testing environment.",
+          "p2": "Utilizing speech recognition technologies and high-fidelity text-to-speech models, the simulated interviewer responds in real-time, asking relevant follow-up questions based on the candidate's answers.",
+          "p3": "At the end of the simulation, candidates receive detailed, structured feedback on their communication style, answer accuracy, and areas of improvement, allowing them to refine their interview technique."
+        },
+        "coreIdea": {
+          "title": "Voice Integration & Real-Time Sync",
+          "p1": "The core real-time voice handling is powered by Vapi, enabling natural conversation patterns with low-latency audio processing. The UI is built using Next.js and Tailwind CSS for cross-device fluidity.",
+          "p2": "Firebase handles secure authentication and real-time database syncing, preserving user sessions and evaluation reports."
+        }
+      }
+    },
+    "job-application-bot": {
+      "title": "Automated Job Application Bot",
+      "status": "Completed & Deployed",
+      "sections": {
+        "overview": {
+          "title": "Project Overview",
+          "p1": "This project is an advanced workflow automation bot that simplifies and streamlines the job hunting process. It actively tracks relevant opportunities and reduces manual overhead by auto-matching positions.",
+          "p2": "By combining external developer APIs and a flexible orchestration engine, the bot fetches job listings daily, parses description keywords, and scores positions based on user profile compatibility.",
+          "p3": "Once high-scoring jobs are identified, the bot automatically catalogs them and fires real-time notifications directly to the user's communication channels."
+        },
+        "coreIdea": {
+          "title": "Orchestration & Integration",
+          "p1": "The main workflow engine is powered by n8n, orchestrating API requests and webhooks. It communicates directly with LinkedIn APIs to pull current job openings.",
+          "p2": "Filtered jobs are processed through an AI-based scoring script and cataloged into structured databases for dashboard analysis, sending instantaneous alerts via email and Slack."
+        }
+      }
+    }
+  }
+}

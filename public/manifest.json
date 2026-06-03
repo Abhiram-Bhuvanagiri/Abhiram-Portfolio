@@ -1,0 +1,15 @@
+{
+  "short_name": "Abhiram",
+  "name": "Abhiram Bhuvanagiri Portfolio",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0c0c10",
+  "theme_color": "#18969E",
+  "display": "standalone"
+}
