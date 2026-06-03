@@ -2,13 +2,23 @@
 
 > *Building scalable web applications with clean, efficient, and maintainable code.*
 
-📞 +91-9390545520 &nbsp;|&nbsp; 📧 abhiii.1818@gmail.com &nbsp;|&nbsp; [LinkedIn](https://linkedin.com/in/abhiram-bhuvanagiri-394a4a377/) &nbsp;|&nbsp; [GitHub](https://github.com/Abhiram-Bhuvanagiri) &nbsp;|&nbsp; 🌐 [Portfolio](https://abhiram-bhuvanagiri.netlify.app)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-abhiram--portfolio--nu.vercel.app-brightgreen?style=for-the-badge)](https://abhiram-portfolio-nu.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/abhiram-bhuvanagiri-394a4a377/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/Abhiram-Bhuvanagiri)
+
+---
+
+## 🚀 Live Portfolio
+
+**👉 [https://abhiram-portfolio-nu.vercel.app/](https://abhiram-portfolio-nu.vercel.app/)**
 
 ---
 
 ## 🧑‍💻 About Me
 
 Full Stack Developer with a strong passion for building scalable web applications and enhancing user experience through clean, efficient, and maintainable code. Currently pursuing B.E. in Computer Science and Engineering at VITS Engineering College (GPA: 7.0/10.0, Nov 2022 – May 2026).
+
+📞 +91-9390545520 &nbsp;|&nbsp; 📧 abhiii.1818@gmail.com &nbsp;|&nbsp; [LinkedIn](https://linkedin.com/in/abhiram-bhuvanagiri-394a4a377/) &nbsp;|&nbsp; [GitHub](https://github.com/Abhiram-Bhuvanagiri)
 
 ---
 
@@ -25,14 +35,14 @@ Full Stack Developer with a strong passion for building scalable web application
 
 ## 🚀 Projects
 
-### 🔴 [AI-Powered Real-Time Stock Market App](https://github.com/Abhiram-Bhuvanagiri)
+### 🔴 AI-Powered Real-Time Stock Market App
 - Built a real-time stock market web app using **Next.js**, **Inngest**, and **MongoDB**.
 - Integrated financial APIs for live data with automated background updates.
 - Designed interactive dashboards for stock trends and performance.
 - Implemented AI-driven insights for intelligent trading suggestions.
 - Enabled secure authentication and alerts using **Better Auth** and **Node Mailer**.
 
-### 🎤 [AI-Driven Voice Interview Simulation Platform](https://github.com/Abhiram-Bhuvanagiri)
+### 🎤 AI-Driven Voice Interview Simulation Platform
 - Developed a real-time AI interview platform using **Next.js** and **Tailwind CSS**.
 - Integrated **Vapi** for speech recognition and AI-based voice interaction.
 - Used **Firebase** for authentication and real-time data handling.
@@ -76,7 +86,7 @@ Relevant Coursework: Python, JavaScript, Tailwind CSS, Data Structures and Algor
 
 ---
 
-## 📂 This Repository
+## 📂 Run Locally
 
 ```bash
 git clone https://github.com/Abhiram-Bhuvanagiri/Abhiram-Portfolio.git
@@ -94,6 +104,7 @@ Open **http://localhost:5173** in your browser.
 - 📧 Email: abhiii.1818@gmail.com
 - 💼 LinkedIn: [linkedin.com/in/abhiram-bhuvanagiri-394a4a377](https://linkedin.com/in/abhiram-bhuvanagiri-394a4a377/)
 - 🐙 GitHub: [github.com/Abhiram-Bhuvanagiri](https://github.com/Abhiram-Bhuvanagiri)
+- 🌐 Portfolio: [abhiram-portfolio-nu.vercel.app](https://abhiram-portfolio-nu.vercel.app/)
 
 ---
 
