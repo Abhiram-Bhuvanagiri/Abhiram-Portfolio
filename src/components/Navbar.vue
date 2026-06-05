@@ -42,7 +42,7 @@
           </div>
 
           <!-- Desktop resume + mobile toggle -->
-          <div class="ml-auto flex items-center gap-3 lg:ml-0 lg:justify-self-end">
+          <div class="ml-auto flex items-center gap-3 pr-12 lg:pr-0 lg:ml-0 lg:justify-self-end">
             <!-- Desktop Theme Toggle -->
             <label v-if="!isProjectPage" class="ui-switch hidden lg:inline-flex mr-5 desktop-switch">
               <input v-model="isDark" type="checkbox" aria-label="Toggle theme" />
@@ -57,7 +57,7 @@
               :href="resumeLinks.en"
               target="_blank"
               rel="noopener noreferrer"
-              class="group relative inline-block px-4 py-2 font-medium hidden lg:block ml-2"
+              class="group relative inline-block px-4 py-2 font-medium ml-2"
               @click.prevent="openResume(resumeLinks.en)"
             >
               <span

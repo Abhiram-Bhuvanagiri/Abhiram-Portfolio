@@ -63,7 +63,8 @@ const projectMeta = {
     techs: ["Next.js", "Inngest", "MongoDB", "Better Auth", "Node Mailer"]
   },
   "voice-interview-simulation": {
-    github: "https://github.com/Abhiram-Bhuvanagiri",
+    github: "https://github.com/Abhiram-Bhuvanagiri/ai-mock-interviews",
+    live: "https://ai-mock-interviews-opal-six.vercel.app/",
     techs: ["Next.js", "Vapi", "Firebase", "Tailwind CSS"]
   },
   "job-application-bot": {
