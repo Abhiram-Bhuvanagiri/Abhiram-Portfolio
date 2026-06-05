@@ -130,6 +130,7 @@
     "back": "プロジェクト一覧に戻る",
     "statusLabel": "状況",
     "githubLabel": "GitHub リポジトリ",
+    "liveLabel": "ライブサイト",
     "techStackLabel": "使用技術",
     "stock-market-app": {
       "title": "AI駆動リアルタイム株式市場アプリ",

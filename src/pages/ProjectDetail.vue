@@ -9,12 +9,16 @@
       <header class="project-header">
         <span class="project-status" v-if="projectStatus">{{ projectStatus }}</span>
         <h1 class="project-title">{{ projectTitle }}</h1>
-        <div class="project-links-meta mt-2 flex flex-wrap gap-4 text-sm" v-if="projectGitHub || projectTechs.length">
+        <div class="project-links-meta mt-2 flex flex-wrap gap-4 text-sm" v-if="projectGitHub || projectLive || projectTechs.length">
           <a v-if="projectGitHub" :href="projectGitHub" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-[color:var(--theme-headline-from)] transition-colors duration-200">
             <i class="bi bi-github"></i>
             <span>{{ t("projectDetail.githubLabel") }}</span>
           </a>
-          <span v-if="projectGitHub && projectTechs.length" class="text-[color:var(--theme-text-muted)]">|</span>
+          <a v-if="projectLive" :href="projectLive" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-[color:var(--theme-headline-from)] transition-colors duration-200">
+            <i class="bi bi-box-arrow-up-right"></i>
+            <span>{{ t("projectDetail.liveLabel") }}</span>
+          </a>
+          <span v-if="(projectGitHub || projectLive) && projectTechs.length" class="text-[color:var(--theme-text-muted)]">|</span>
           <div v-if="projectTechs.length" class="flex items-center gap-1.5 text-[color:var(--theme-text-muted)] flex-wrap">
             <span class="font-semibold text-[color:var(--theme-text-soft)]">{{ t("projectDetail.techStackLabel") }}:</span>
             <span>{{ projectTechs.join(', ') }}</span>
@@ -54,7 +58,8 @@ const projectId = computed(() => route.params.id || "stock-market-app");
 // Project specific metadata that doesn't need to be localized
 const projectMeta = {
   "stock-market-app": {
-    github: "https://github.com/Abhiram-Bhuvanagiri",
+    github: "https://github.com/Abhiram-Bhuvanagiri/stock-market-app",
+    live: "https://stock-market-app-six.vercel.app",
     techs: ["Next.js", "Inngest", "MongoDB", "Better Auth", "Node Mailer"]
   },
   "voice-interview-simulation": {
@@ -70,6 +75,7 @@ const projectMeta = {
 const projectTitle = computed(() => t(`projectDetail.${projectId.value}.title`));
 const projectStatus = computed(() => t(`projectDetail.${projectId.value}.status`));
 const projectGitHub = computed(() => projectMeta[projectId.value]?.github || "");
+const projectLive = computed(() => projectMeta[projectId.value]?.live || "");
 const projectTechs = computed(() => projectMeta[projectId.value]?.techs || []);
 
 const overviewSection = computed(() => tm(`projectDetail.${projectId.value}.sections.overview`));

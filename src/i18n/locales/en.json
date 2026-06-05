@@ -130,6 +130,7 @@
     "back": "Back to Projects",
     "statusLabel": "Status",
     "githubLabel": "GitHub Repository",
+    "liveLabel": "Live Project",
     "techStackLabel": "Tech Stack",
     "stock-market-app": {
       "title": "AI-Powered Real-Time Stock Market App",
