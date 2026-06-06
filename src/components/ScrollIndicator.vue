@@ -73,13 +73,15 @@ onBeforeUnmount(() => {
   position: fixed;
   right: 12px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateZ(0);
   width: 6px;
   height: 80px;
   background: rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   z-index: 9999;
   pointer-events: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .scroll-indicator__thumb {
@@ -91,5 +93,8 @@ onBeforeUnmount(() => {
   background: #01baef;
   border-radius: 999px;
   will-change: height;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 </style>

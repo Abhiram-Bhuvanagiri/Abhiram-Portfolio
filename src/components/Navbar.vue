@@ -683,18 +683,20 @@ onBeforeUnmount(() => {
   background: var(--theme-menu-circle);
   transform-origin: top right;
   will-change: transform;
-  transform: translate(50%, -50%) scale(0);
+  transform: translate(50%, -50%) scale(0) translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  /* Promote to own compositing layer */
+  isolation: isolate;
 }
 
 .menu-circle-open {
-  transform: translate(50%, -50%) scale(1);
+  transform: translate(50%, -50%) scale(1) translateZ(0);
   transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 .menu-circle-closed {
-  transform: translate(50%, -50%) scale(0);
+  transform: translate(50%, -50%) scale(0) translateZ(0);
   transition: transform 0.25s cubic-bezier(0.32, 0, 0.67, 0);
 }
 

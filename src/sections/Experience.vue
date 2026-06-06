@@ -172,15 +172,19 @@ onMounted(async () => {
 
   if (!sectionEl || !titleEl || !bgEl || !gridEl) return;
 
+  // Use simpler animations on mobile to prevent GPU thrashing / flickering
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const blurFrom = isMobile ? '0px' : '6px';
+
   gsap.set([titleEl, bgEl, subtitleEl], {
     opacity: 0,
     y: 28,
-    filter: 'blur(6px)'
+    filter: `blur(${blurFrom})`
   });
 
   gsap.set(gridEl.children, {
     opacity: 0,
-    y: 40
+    y: isMobile ? 20 : 40
   });
 
   expTimeline = gsap.timeline({
@@ -195,7 +199,7 @@ onMounted(async () => {
     .to(bgEl, {
       opacity: 0.08,
       y: 0,
-      filter: 'blur(10px)',
+      filter: isMobile ? 'blur(0px)' : 'blur(10px)',
       duration: 1.1,
       ease: 'power3.out'
     })
@@ -216,7 +220,7 @@ onMounted(async () => {
     .to(gridEl.children, {
       opacity: 1,
       y: 0,
-      duration: 1.0,
+      duration: isMobile ? 0.6 : 1.0,
       ease: 'power3.out',
       stagger: 0.2
     }, 0.4);

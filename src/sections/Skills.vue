@@ -186,16 +186,22 @@ onMounted(async () => {
 
   if (!sectionEl || !titleEl || !bgEl || !dividerEl || !taglineEl) return;
 
+  // Use simpler animations on mobile to prevent GPU thrashing / flickering
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const blurFrom = isMobile ? '0px' : '6px';
+  const blurMid = isMobile ? '0px' : '10px';
+  const blurDiv = isMobile ? '0px' : '4px';
+
   gsap.set([titleEl, bgEl], {
     opacity: 0,
     y: 28,
-    filter: 'blur(6px)'
+    filter: `blur(${blurFrom})`
   });
 
   gsap.set([dividerEl, taglineEl], {
     opacity: 0,
     y: 18,
-    filter: 'blur(4px)'
+    filter: `blur(${blurDiv})`
   });
 
   skillsTimeline = gsap.timeline({
@@ -210,7 +216,7 @@ onMounted(async () => {
     .to(bgEl, {
       opacity: 0.08,
       y: 0,
-      filter: 'blur(10px)',
+      filter: `blur(${blurMid})`,
       duration: 1.1,
       ease: 'power3.out'
     })
@@ -241,7 +247,7 @@ onMounted(async () => {
 
   const skillTags = sectionEl.querySelectorAll('.skill-tag');
   if (skillTags.length) {
-    gsap.set(skillTags, { opacity: 0, scale: 0.1, y: 40 });
+    gsap.set(skillTags, { opacity: 0, scale: isMobile ? 0.85 : 0.1, y: isMobile ? 20 : 40 });
     skillsGridTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: sectionEl,
@@ -250,13 +256,13 @@ onMounted(async () => {
       }
     });
     skillsGridTimeline.to(skillTags, {
-      duration: 1.4,
+      duration: isMobile ? 0.7 : 1.4,
       opacity: 1,
       scale: 1,
       y: 0,
       ease: 'power3.out',
       stagger: {
-        amount: 1.9,
+        amount: isMobile ? 0.8 : 1.9,
         grid: 'auto',
         from: 'center'
       }

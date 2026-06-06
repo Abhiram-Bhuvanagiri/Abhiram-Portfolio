@@ -89,7 +89,10 @@ onMounted(async () => {
   const { default: gsap } = await import('gsap');
   if (revealGrid.value) {
     const fragment = document.createDocumentFragment();
-    for (let i = 0; i < 200; i += 1) {
+    // Use fewer boxes on mobile to reduce GPU load and prevent flickering
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const boxCount = isMobile ? 60 : 200;
+    for (let i = 0; i < boxCount; i += 1) {
       const box = document.createElement('div');
       box.className = 'about-reveal-box';
       fragment.appendChild(box);
@@ -207,14 +210,21 @@ onUnmounted(() => {
 .about-reveal-box {
   background: color-mix(in srgb, var(--theme-text-strong) 72%, var(--theme-bg) 28%);
   clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
-  transform: scale(1);
+  transform: scale(1) translateZ(0);
   opacity: 1;
+  contain: layout style;
+}
+
+.about-reveal-grid {
+  contain: strict;
 }
 
 .about-bg {
   opacity: 0;
   transition: opacity 0.6s ease;
   box-shadow: none !important;
+  transform: translateZ(0);
+  will-change: opacity;
 }
 
 .about-bg.is-visible {

@@ -527,7 +527,6 @@ onMounted(async () => {
   const sectionEl = contactSection.value;
   if (!wrapperEl || !sectionEl) return;
 
-  document.documentElement.style.scrollBehavior = 'auto';
   const isMobileLayout = window.matchMedia('(max-width: 768px)').matches;
 
   if (isMobileLayout) {
@@ -658,7 +657,6 @@ onBeforeUnmount(() => {
 
   isWrapperVisible = false;
   wasWrapperVisible = false;
-  document.documentElement.style.scrollBehavior = '';
 });
 </script>
 
@@ -674,8 +672,13 @@ onBeforeUnmount(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  will-change: transform;
-  contain: layout paint;
+  will-change: transform, clip-path;
+  contain: layout paint style;
+  /* Force own GPU compositing layer to prevent flicker during scrub */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  isolation: isolate;
   background: radial-gradient(
       120% 120% at 10% 0%,
       rgba(36, 38, 56, 0.6),

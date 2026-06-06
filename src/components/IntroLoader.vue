@@ -153,6 +153,11 @@ onBeforeUnmount(() => {
   inset: 0;
   z-index: 200;
   overflow: hidden;
+  /* Own compositing layer prevents flicker from clip-path tile animations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: strict;
 }
 
 .intro-tiles {

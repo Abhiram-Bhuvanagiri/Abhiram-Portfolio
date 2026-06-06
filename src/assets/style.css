@@ -22,8 +22,17 @@
   font-display: swap;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Smooth scrolling only on desktop - prevents iOS Safari flicker/jitter */
+@media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Prevent overscroll bounce flicker on iOS / Android */
+html,
+body {
+  overscroll-behavior: none;
 }
 
 :root {
@@ -132,4 +141,29 @@ body {
   color: var(--theme-text-strong);
   background: var(--theme-bg-gradient, none);
   background-color: var(--theme-bg);
+  /* Prevent text rendering flicker during transitions */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent tap flash on mobile */
+  -webkit-tap-highlight-color: transparent;
 }
+
+/* Ensure the app root is positioned correctly to prevent layout flicker */
+#app {
+  min-height: 100dvh;
+  isolation: isolate;
+  position: relative;
+}
+
+/* Prevent images from causing layout reflow flicker */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Performance optimization: promote interactive elements to GPU */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+

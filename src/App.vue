@@ -68,22 +68,22 @@ window.addEventListener("intro:reveal", () => {
 </script>
 
 <style>
-html {
-  scroll-behavior: smooth;
-}
-
 /* Multi-panel wipe transition */
 .page-transition {
   position: fixed;
   inset: 0;
   z-index: 98;
   pointer-events: none;
+  contain: strict;
 }
 
 .wipe-panel {
   position: fixed;
   inset: 0;
-  transform: translateY(100%);
+  transform: translateY(100%) translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .panel-1 { background: #292524; }
@@ -107,16 +107,16 @@ html {
 
 @keyframes panelWipe {
   0% {
-    transform: translateY(100%);
+    transform: translateY(100%) translateZ(0);
   }
   45% {
-    transform: translateY(0%);
+    transform: translateY(0%) translateZ(0);
   }
   55% {
-    transform: translateY(0%);
+    transform: translateY(0%) translateZ(0);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateZ(0);
   }
 }
 
