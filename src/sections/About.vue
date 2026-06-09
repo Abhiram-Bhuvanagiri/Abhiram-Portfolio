@@ -17,7 +17,7 @@
             ></div>
             <div
               ref="imageFrame"
-              class="about-image-frame absolute top-0 left-0 sm:top-[16px] sm:left-[18px] z-[2] h-full w-full overflow-hidden rounded-[24px] shadow-[0_22px_60px_rgba(0,0,0,0.35),0_0_24px_color-mix(in_srgb,var(--theme-cta-bg)_35%,transparent)]"
+              class="about-image-frame absolute top-0 left-0 lg:top-[16px] lg:left-[18px] z-[2] h-full w-full overflow-hidden rounded-[24px] shadow-[0_22px_60px_rgba(0,0,0,0.35),0_0_24px_color-mix(in_srgb,var(--theme-cta-bg)_35%,transparent)]"
               :class="[imageVisible ? 'is-visible' : '', showEffects ? 'show-effects' : '']"
             >
               <img
@@ -43,7 +43,7 @@
             class="about-reveal-grid absolute -inset-2.5 z-[2] grid grid-cols-12 [grid-auto-rows:1fr] gap-2.5 pointer-events-none"
             aria-hidden="true"
           ></div>
-          <h2 class="relative z-[1] text-[clamp(2rem,3vw,3.2rem)] font-extrabold uppercase tracking-[0.08em] text-[var(--theme-text-strong)]">
+          <h2 class="relative z-[1] text-[clamp(2rem,3vw,3.2rem)] font-extrabold uppercase tracking-[0.08em] text-[var(--theme-text-strong)] text-center lg:text-left">
             {{ t('about.title') }}
           </h2>
           <p class="relative z-[1] mt-6 text-lg font-medium leading-[2.2] text-[var(--theme-text-muted)] md:text-xl">
