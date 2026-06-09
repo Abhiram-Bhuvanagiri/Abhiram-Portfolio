@@ -143,22 +143,20 @@ onMounted(async () => {
   });
 
   waveLottieAnim.setSpeed(isMobile ? 0.3 : 0.4);
-  if (isMobile) {
-    waveLottieAnim.pause();
-    waveLottieObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            waveLottieAnim?.play();
-          } else {
-            waveLottieAnim?.pause();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionEl) waveLottieObserver.observe(sectionEl);
-  }
+  waveLottieAnim.pause();
+  waveLottieObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          waveLottieAnim?.play();
+        } else {
+          waveLottieAnim?.pause();
+        }
+      });
+    },
+    { threshold: 0.05 }
+  );
+  if (sectionEl) waveLottieObserver.observe(sectionEl);
 
   // Pin footer for scroll delay effect (desktop only)
   gsap.registerPlugin(ScrollTrigger);
@@ -416,6 +414,8 @@ onUnmounted(() => {
   color: var(--theme-headline-from);
   text-align: center;
   user-select: none;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 .footer-bottom {
