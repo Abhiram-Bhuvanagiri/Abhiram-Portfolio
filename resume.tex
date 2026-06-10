@@ -1,0 +1,130 @@
+import fs from 'fs';
+
+const latexCode = `\\documentclass[11pt,a4paper]{article}
+
+% ---------- Packages ----------
+\\usepackage[top=1.2cm, bottom=1.2cm, left=1.2cm, right=1.2cm]{geometry}
+\\usepackage{enumitem}
+\\usepackage{titlesec}
+\\usepackage{hyperref}
+\\usepackage{xcolor}
+\\usepackage{parskip}
+\\usepackage{fontawesome5}
+\\usepackage[many]{tcolorbox}
+
+% ---------- ATS-Friendly Font ----------
+\\usepackage{helvet}
+\\renewcommand{\\familydefault}{\\sfdefault}
+
+% ---------- Settings ----------
+\\pagenumbering{gobble}
+\\setlength{\\parindent}{0pt}
+\\setlength{\\parskip}{3pt}
+\\renewcommand{\\baselinestretch}{1.05}
+
+\\setlist[itemize]{
+    noitemsep,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt,
+    leftmargin=*,
+    label=\\textbullet
+}
+
+% ---------- Section Formatting ----------
+\\titleformat{\\section}
+  {\\large\\bfseries}{}{0em}{}
+  [\\vspace{-4pt}\\titlerule]
+
+\\titlespacing{\\section}{0pt}{10pt}{6pt}
+
+% ---------- Document ----------
+\\begin{document}
+
+\\begin{tcolorbox}[colback=white, colframe=black, 
+                  boxrule=0.8pt, arc=3pt,
+                  left=10pt, right=10pt, top=8pt, bottom=8pt,
+                  breakable]
+
+% ---------- Header ----------
+\\begin{center}
+  {\\Large\\bfseries ABHIRAM BHUVANAGIRI} \\\\[4pt]
+  {\\large\\bfseries Full Stack Developer} \\\\[8pt]
+
+  \\faPhone\\ +91-9390545520 \\quad $|$ \\quad
+  \\faEnvelope\\ \\href{mailto:abhiii.1818@gmail.com}{abhiii.1818@gmail.com} \\quad $|$ \\quad
+  \\faLinkedin\\ \\href{https://www.linkedin.com/in/abhiram-bhuvanagiri-394a4a377}{LinkedIn} \\quad $|$ \\quad
+  \\faGithub\\ \\href{https://github.com/Abhiram-Bhuvanagiri}{GitHub}
+\\end{center}
+
+% ---------- Profile ----------
+\\section{Profile Summary}
+
+Full Stack Developer skilled in React, Next.js, Node.js, Express.js, MongoDB, and Generative AI technologies. Experienced in building scalable web applications, integrating LLMs and APIs, and developing automation solutions. Strong problem-solving abilities with a solid foundation in Data Structures and Algorithms.
+% ---------- Education ----------
+\\section*{Education}
+\\textbf{VITS Engineering College} \\hfill \\textit{Nov 2022 -- May 2026} \\\\
+Computer Science and Engineering \\\\
+Cumulative GPA: 7.0 / 10.0 \\\\
+Relevant Coursework: Python, JavaScript, Tailwind CSS, Data Structures and Algorithms
+
+% ---------- Experience ----------
+\\section*{Experience}
+
+\\textbf{Gen AI Engineer Intern} \\hfill \\textit{Nov 2025 -- Apr 2026} \\\\
+\\textbf{SyncAI} \\hfill \\textit{Remote}
+
+\\begin{itemize}
+  \\item Built and deployed LLM-powered applications using LangChain and Hugging Face Transformers.
+  \\item Implemented RAG pipelines with vector databases to improve contextual response accuracy.
+  \\item Designed prompt engineering workflows for optimized AI-generated outputs.
+  \\item Integrated AI functionalities into full-stack applications using FastAPI and React.
+  \\item Improved inference efficiency and reduced latency through optimized API handling.
+\\end{itemize}
+
+% ---------- Projects ----------
+\\section*{Projects}
+
+\\textbf{\\href{https://stock-market-app-six.vercel.app/sign-in}{AI-Powered Real-Time Stock Market App}}
+\\begin{itemize}
+  \\item Built a real-time stock market web app using Next.js, Inngest, and MongoDB.
+  \\item Integrated financial APIs for live data with automated background updates.
+  \\item Implemented AI-driven insights for intelligent trading suggestions.
+  \\item Enabled secure authentication and alerts using Better Auth and Node Mailer.
+\\end{itemize}
+
+\\textbf{\\href{https://ai-mock-interviews-opal-six.vercel.app/}{AI-Driven Voice Interview Simulation Platform}}
+\\begin{itemize}
+  \\item Developed a real-time AI interview platform using Next.js and Tailwind CSS.
+  \\item Integrated Vapi for speech recognition and AI-based voice interaction.
+  \\item Used Firebase for authentication and real-time data handling.
+  \\item Simulated realistic interview scenarios with instant AI feedback.
+\\end{itemize}
+
+\\textbf{Automated Job Application Bot}
+\\begin{itemize}
+  \\item Built an automation bot using n8n for daily job tracking and filtering.
+  \\item Integrated LinkedIn APIs with AI-based job relevance scoring.
+  \\item Automated workflows to eliminate manual job searching.
+  \\item Delivered real-time alerts via email and Slack notifications.
+\\end{itemize}
+
+% ---------- Skills ----------
+\\section*{Skills}
+\\textbf{Languages:} Python, JavaScript \\\\
+\\textbf{Frontend:} React, Next.js, Tailwind CSS \\\\
+\\textbf{Backend:} Node.js, Express.js, MongoDB, Supabase \\\\
+\\textbf{Tools:} Git, GitHub, VS Code, Postman, Figma, n8n, LLMs
+
+% ---------- Certifications ----------
+\\section*{Certifications \\& Learning}
+\\begin{itemize}
+  \\item Full Stack Web Development — The Odin Project, freeCodeCamp
+   \\item Generative AI with Large Language Models — DeepLearning.AI \\& AWS
+\\end{itemize}
+
+\\end{tcolorbox}
+
+\\end{document}`;
+
+fs.writeFileSync('resume.tex', latexCode);
